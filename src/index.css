@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(105 58 170);
+}
+
+.bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(111 94 144);
+}
+
+.text-purple-600 {
+  --tw-text-opacity: 1;
+  color: rgb(111 94 144);
+}
+
+.text-purple-500 {
+  --tw-text-opacity: 1;
+  color: rgb(111 94 144);
+}
+
+.hover\:bg-purple-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(89 47 126);
+}
+
+.hover\:text-purple-600:hover {
+  color: rgb(89 47 126);
+}
+
+.hover\:text-purple-500:hover {
+  color: rgb(89 47 126);
+}
+
+.border-purple-500\/50 {
+  border-color: rgb(243 244 246);
+}
+
+/* Filter button styles */
+.button {
+  text-decoration: none;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button-decor {
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr);
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: 0;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.button__icon {
+  width: 48px;
+  height: 40px;
+  background-color: var(--clr);
+  display: grid;
+  place-items: center;
+}
+
+.button__text {
+  display: inline-block;
+  transition: color 0.2s;
+  padding: 2px 1.5rem 2px;
+  padding-left: 0.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.button:hover .button-decor {
+  transform: translate(0);
+}
